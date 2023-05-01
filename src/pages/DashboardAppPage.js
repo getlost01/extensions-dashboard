@@ -51,7 +51,7 @@ export default function DashboardAppPage() {
             <AppWidgetSummary title="Today's Unique Users" total={234} color="error" />
           </Grid>
 
-          <Grid item xs={12} md={6} lg={8}>
+          <Grid item xs={12} lg={8}>
             <AppWebsiteVisits
               title="User Data"
               subheader="(+10) new users today"
@@ -93,26 +93,25 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} md={6} lg={4}>
             <AppCurrentVisits
-              title="Current Visits"
+              title="Operating Systems"
+              subheader="Distribution by Operating Systems"
               chartData={[
-                { label: 'America', value: 4344 },
-                { label: 'Asia', value: 5435 },
-                { label: 'Europe', value: 1443 },
-                { label: 'Africa', value: 4443 },
+                { label: 'Mac', value: 4344 },
+                { label: 'Window', value: 5435 },
+                { label: 'Linux', value: 1443 }
               ]}
               chartColors={[
                 theme.palette.primary.main,
-                theme.palette.info.main,
-                theme.palette.warning.main,
                 theme.palette.error.main,
+                theme.palette.warning.main,
               ]}
             />
           </Grid>
 
           <Grid item xs={12} md={6} lg={8}>
             <AppConversionRates
-              title="Conversion Rates"
-              subheader="(+43%) than last year"
+              title="Countries"
+              subheader="Distribution by countries"
               chartData={[
                 { label: 'Italy', value: 400 },
                 { label: 'Japan', value: 430 },

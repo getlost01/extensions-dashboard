@@ -50,7 +50,7 @@ export default function AppCurrentVisits({ title, subheader, chartColors, chartD
     labels: chartLabels,
     stroke: { colors: [theme.palette.background.paper] },
     legend: { floating: true, horizontalAlign: 'center' },
-    dataLabels: { enabled: true, dropShadow: { enabled: false } },
+    dataLabels: { enabled: false, dropShadow: { enabled: true } },
     tooltip: {
       fillSeriesColor: false,
       y: {
@@ -61,16 +61,16 @@ export default function AppCurrentVisits({ title, subheader, chartColors, chartD
       },
     },
     plotOptions: {
-      pie: { donut: { labels: { show: false } } },
+      pie: { donut: { labels: { show: true },  size: '80%' } },
     },
   });
 
   return (
-    <Card {...other}>
+    <Card {...other} sx={{height:490}}>
       <CardHeader title={title} subheader={subheader} />
 
       <StyledChartWrapper dir="ltr">
-        <ReactApexChart type="pie" series={chartSeries} options={chartOptions} height={280} />
+        <ReactApexChart type="donut" series={chartSeries} options={chartOptions} height={300} />
       </StyledChartWrapper>
     </Card>
   );
